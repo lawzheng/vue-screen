@@ -3,9 +3,11 @@
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link> |
     <router-link to="/test">test</router-link>
-    <test-component></test-component>
-    <!--  <test-component-2></test-component-2>-->
-    <!--  <test-component-3></test-component-3>-->
+    <div style="color: red;">
+      <test-component/>
+    </div>
+    <test-component-2/>
+    <test-component-three/>
   </div>
   <router-view/>
 </template>
