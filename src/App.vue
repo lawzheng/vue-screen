@@ -3,9 +3,19 @@
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link> |
     <router-link to="/test">test</router-link>
-    <div style="color: red;">
-      <test-component/>
-    </div>
+    <test-component/>
+    <svg width="30" height="30">
+      <use href="#more"></use>
+    </svg>
+    <svg width="30" height="30">
+      <use href="#play"></use>
+    </svg>
+    <svg width="30" height="30">
+      <use href="#right"></use>
+    </svg>
+    <Icon prefix="" name="right" :style="{width: '30px', height: '30px', color: 'red'}"></Icon>
+    <Icon prefix="" name="box" :style="{width: '30px', height: '30px', color: 'red'}"></Icon>
+    <Icon name="qq" :style="{width: '30px', height: '30px', color: 'blue'}"></Icon>
     <test-component-2/>
     <test-component-three/>
   </div>
