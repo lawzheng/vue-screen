@@ -24,10 +24,25 @@
             />
           </div>
           <div class="left3">
+            <total-device
+              :data="deviceData"
+            />
           </div>
-          <div class="left4">66</div>
-          <div class="left5">77</div>
-          <div class="left6">88</div>
+          <div class="left4">
+            <total-gender
+              :data="genderData"
+            />
+          </div>
+          <div class="left5">
+            <total-rider
+              :data="riderData"
+            />
+          </div>
+          <div class="left6">
+            <hot-category
+              :data="hotCategoryData"
+            />
+          </div>
         </div>
         <div class="right">
           <div class="right-top1">
@@ -71,6 +86,10 @@ import totalUser from '../components/TotalUser/index'
 import averageAge from '../components/AverageAge/index'
 import centerHeader from '../components/CenterHeader/index'
 import TransformCategory from '../components/TransformCategory/index'
+import TotalDevice from '../components/TotalDevice/index'
+import TotalGender from '../components/TotalGender/index'
+import TotalRider from '../components/TotalRider/index'
+import HotCategory from '../components/HotCategory/index'
 
 export default {
   name: 'Home',
@@ -79,7 +98,11 @@ export default {
     totalUser,
     averageAge,
     centerHeader,
-    TransformCategory
+    TransformCategory,
+    TotalDevice,
+    TotalGender,
+    TotalRider,
+    HotCategory
   },
   setup () {
     const loading = ref(true)

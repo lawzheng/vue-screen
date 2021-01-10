@@ -9,11 +9,11 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "echarts": "^5.0.0",
-    "rollup-vue-datav-lib": "1.0.1",
+    "echarts": "4.9.0",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0",
-    "vuex": "^4.0.0-0"
+    "vuex": "^4.0.0-0",
+    "rollup-vue-datav-lib": "^1.0.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
