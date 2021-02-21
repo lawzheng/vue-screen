@@ -57,7 +57,9 @@
           </div>
           <div class="right-bottom">
             <div class="right-left">
-              <div class="right-left1">1</div>
+              <div class="right-left1">
+                <test/>
+              </div>
               <div class="right-left2">
                 <transform-category
                   :data="['订单量', '销售额', '用户数', '退单量']"
@@ -68,7 +70,9 @@
               <div class="right-left4">4</div>
             </div>
             <div class="right-right">
-              <div class="right-right1">234</div>
+              <div class="right-right1">
+                <sale-list :data="salesListData" />
+              </div>
               <div class="right-right2">43</div>
             </div>
           </div>
@@ -90,10 +94,13 @@ import TotalDevice from '../components/TotalDevice/index'
 import TotalGender from '../components/TotalGender/index'
 import TotalRider from '../components/TotalRider/index'
 import HotCategory from '../components/HotCategory/index'
+import SaleList from '../components/SaleList/index'
+import Test from '../views/Test'
 
 export default {
   name: 'Home',
   components: {
+    Test,
     topHeader2,
     totalUser,
     averageAge,
@@ -102,7 +109,8 @@ export default {
     TotalDevice,
     TotalGender,
     TotalRider,
-    HotCategory
+    HotCategory,
+    SaleList
   },
   setup () {
     const loading = ref(true)
@@ -226,6 +234,7 @@ export default {
             flex-direction: column;
             justify-content: space-between;
             margin-left: 10px;
+            margin-right: 20px;
             .right-right1 {
               width: 100%;
               height: 999px;
