@@ -58,7 +58,7 @@
           <div class="right-bottom">
             <div class="right-left">
               <div class="right-left1">
-                <test/>
+                <order-map/>
               </div>
               <div class="right-left2">
                 <transform-category
@@ -66,14 +66,22 @@
                   :color="['rgb(178, 209, 126)', 'rgb(116, 166, 49)']"
                 />
               </div>
-              <div class="right-left3">3</div>
-              <div class="right-left4">4</div>
+              <div class="right-left3">
+                <fly-box starColor="rgb(251,253,142)">
+                  <real-time-order :data="realTimeOrderData"/>
+                </fly-box>
+              </div>
+              <div class="right-left4">
+                <schedule-view :data="scheduleViewData"/>
+              </div>
             </div>
             <div class="right-right">
               <div class="right-right1">
                 <sale-list :data="salesListData" />
               </div>
-              <div class="right-right2">43</div>
+              <div class="right-right2">
+                <sales-rank :data="salesRankData"/>
+              </div>
             </div>
           </div>
         </div>
@@ -95,12 +103,15 @@ import TotalGender from '../components/TotalGender/index'
 import TotalRider from '../components/TotalRider/index'
 import HotCategory from '../components/HotCategory/index'
 import SaleList from '../components/SaleList/index'
-import Test from '../views/Test'
+import OrderMap from '../components/OrderMap/index'
+import RealTimeOrder from '../components/RealTimeOrder/index'
+import ScheduleView from '../components/ScheduleView/index'
+import SalesRank from '../components/SalesRank/index'
 
 export default {
   name: 'Home',
   components: {
-    Test,
+    OrderMap,
     topHeader2,
     totalUser,
     averageAge,
@@ -110,7 +121,10 @@ export default {
     TotalGender,
     TotalRider,
     HotCategory,
-    SaleList
+    SaleList,
+    RealTimeOrder,
+    ScheduleView,
+    SalesRank
   },
   setup () {
     const loading = ref(true)
